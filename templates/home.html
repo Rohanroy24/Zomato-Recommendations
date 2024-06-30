@@ -140,23 +140,24 @@
             margin-bottom: 20px;
         }
 
-        .reviews-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 20px;
+        /* Reviews Dropdown */
+        .reviews-dropdown {
+            margin-top: 20px;
         }
 
-        .review-card {
-            background-color: #ffffff; /* White card background */
-            color: #1a3c40; /* Dark sea-green text */
-            padding: 20px;
+        .reviews-dropdown select {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #1a3c40; /* Dark sea-green border */
             border-radius: 8px;
-            transition: transform 0.3s;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            background-color: #ffffff; /* White background */
+            color: #1a3c40; /* Dark sea-green text */
+            cursor: pointer;
+            transition: border-color 0.3s, background-color 0.3s;
         }
 
-        .review-card:hover {
-            transform: translateY(-10px);
+        .reviews-dropdown select:hover {
+            border-color: #2e8b57; /* Sea-green border on hover */
         }
 
         /* Footer Styles */
@@ -222,13 +223,15 @@
 
     <section id="reviews" class="section">
         <div class="container">
-            <h2>Top Reviews</h2>
-            <div class="reviews-grid">
-                <div class="review-card">Review 1</div>
-                <div class="review-card">Review 2</div>
-                <div class="review-card">Review 3</div>
-                <div class="review-card">Review 4</div>
-                <div class="review-card">Review 5</div>
+            <h2>Find out top reviews from customers</h2>
+            <div class="reviews-dropdown">
+                <select onchange="location = this.value;">
+                    <option value="/reviews/top1">Top 1</option>
+                    <option value="/reviews/top2">Top 2</option>
+                    <option value="/reviews/top3">Top 3</option>
+                    <option value="/reviews/top4">Top 4</option>
+                    <option value="/reviews/top5">Top 5</option>
+                </select>
             </div>
         </div>
     </section>
@@ -268,4 +271,9 @@
 
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 CoffeeTales. All
+            <p>&copy; 2024 CoffeeTales. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+
+</html>
